@@ -13,16 +13,16 @@ namespace UnitTestProject1
             var result = string.Empty;
             if (v % 3 == 0)
             {
-                result = "Fizz";
+                result += "Fizz";
             }
-            else if (v % 5 ==0)
+            if (v % 5 == 0)
             {
-                result = "Bazz";
+                result += "Bazz";
+            }
 
-            }
-            else
+            if (result == "")
             {
-                result = v.ToString();
+                result=v.ToString();
             }
             return result;
         }
