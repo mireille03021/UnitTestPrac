@@ -13,5 +13,19 @@ namespace UnitTestProject1
             var actual = target.Calculate(1);
             Assert.AreEqual("1",actual);
         }
+        [TestMethod]
+        public void Input_3_Output_Fizz()
+        {
+            var target = new FizzBazz();
+            var actual = target.Calculate(3);
+            Assert.AreEqual("Fizz", actual);
+        }
+        [TestMethod]
+        public void Input_5_Output_Bazz()
+        {
+            var target = new FizzBazz();
+            var actual = target.Calculate(5);
+            Assert.AreEqual("Bazz", actual);
+        }
     }
 }
