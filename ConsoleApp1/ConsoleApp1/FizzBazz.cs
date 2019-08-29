@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace UnitTestProject1
+namespace ConsoleApp1
 {
-    internal class FizzBazz
+    public class FizzBazz
     {
         public FizzBazz()
         {
         }
 
-        internal string Calculate(int v)
+        public string Calculate(int v)
         {
             var result = string.Empty;
             if (v % 3 == 0)
@@ -19,10 +19,9 @@ namespace UnitTestProject1
             {
                 result += "Bazz";
             }
-
             if (result == "")
             {
-                result=v.ToString();
+                result = v.ToString();
             }
             return result;
         }
