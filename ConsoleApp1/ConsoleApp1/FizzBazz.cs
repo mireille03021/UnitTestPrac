@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -11,18 +12,34 @@ namespace ConsoleApp1
         public string Calculate(int v)
         {
             var result = string.Empty;
-            if (v % 3 == 0)
+            Dictionary<int,string> test= new Dictionary<int, string>()
             {
-                result += "Fizz";
-            }
-            if (v % 5 == 0)
+                { 3,"Fizz"},{5,"Bazz"}
+            };
+            foreach (var item in test)
             {
-                result += "Bazz";
+                if (v % item.Key == 0)
+                {
+                    result += item.Value;
+                }
             }
             if (result == "")
             {
                 result = v.ToString();
             }
+
+            //if (v % 3 == 0)
+            //{
+            //    result += "Fizz";
+            //}
+            //if (v % 5 == 0)
+            //{
+            //    result += "Bazz";
+            //}
+            //if (result == "")
+            //{
+            //    result = v.ToString();
+            //}
             return result;
         }
     }
