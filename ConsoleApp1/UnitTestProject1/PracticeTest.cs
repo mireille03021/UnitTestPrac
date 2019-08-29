@@ -7,8 +7,11 @@ namespace UnitTestProject1
     public class PracticeTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Input_1_Output_1()
         {
+            var target = new FizzBazz();
+            var actual = target.Calculate(1);
+            Assert.AreEqual("1",actual);
         }
     }
 }
